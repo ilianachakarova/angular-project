@@ -1,65 +1,57 @@
-<form [formGroup]="form" class="register" (ngSubmit)="submitHandler()">
+<div class="register-section">
+  <div class="row justify-content-center">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+          <div class="card">
+              <div class="card-header" style="text-align: center">
+                  <h4>Register</h4>
+              </div>
+              <div class="card-body">
+                  <form [formGroup]="form" (ngSubmit)="submitHandler()">
+                      <div class="form-group row">
+                          <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
+                              Address</label>
+                          <div class="col-md-6">
+                              <input [formControlName]="'email'" type="text" id="email_address" class="form-control" name="email-address" required
+                                  autofocus>
+                                  <span class="error" *ngIf="!form.get('email').valid && form.get('email').touched" class="help-block">Please enter a valid email</span>
+                          </div>
+                      </div>
 
-    <fieldset>
-      <h2>Registration Form</h2>
-  
-      <!-- username -->
-      <p class="field field-icon">
-        <label for="username"><span><i class="fas fa-user"></i></span></label>
-        <input [class.input-error]="form.get('username').touched && !!form.get('username').errors" type="text"
-          name="username" id="username" placeholder="Johny" formControlName="username">
-      </p>
-      <p *ngIf="form.get('username').touched && form.get('username').errors?.required" class="error">
-        Username is required!
-      </p>
-      <p *ngIf="form.get('username').touched && form.get('username').errors?.minlength" class="error">
-        Username must be at least 5 characters!
-      </p>
-  
-      <!-- email -->
-      <p class="field field-icon">
-        <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-        <input [class.input-error]="form.get('email').touched && !!form.get('email').errors" type="email" name="email"
-          id="email" placeholder="john.doe@gmail.com" formControlName="email">
-      </p>
-      <p *ngIf="form.get('email').touched && form.get('email').errors?.required" class="error">
-        Email is required!
-      </p>
-      <p *ngIf="form.get('email').touched && form.get('email').errors?.email" class="error">
-        Email is not valid!
-      </p>
-  
-      <!-- password -->
-      <p class="field field-icon">
-        <label for="password"><span><i class="fas fa-lock"></i></span></label>
-        <input [class.input-error]="form.get('password').touched && !!form.get('password').errors" type="password"
-          name="password" id="password" placeholder="******" formControlName="password">
-      </p>
-      <p *ngIf="form.get('password').touched && form.get('password').errors?.required" class="error">
-        Password is required!
-      </p>
-      <p *ngIf="form.get('password').touched && form.get('password').errors?.minlength" class="error">
-        Password must be at least 4 characters!
-      </p>
-  
-      <!-- rePassword -->
-      <p class="field field-icon">
-        <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
-        <input [class.input-error]="form.get('rePassword').touched && !!form.get('rePassword').errors" type="password"
-          name="rePassword" id="rePassword" placeholder="******" formControlName="rePassword">
-      </p>
-      <p *ngIf="form.get('rePassword').touched && form.get('rePassword').errors?.required" class="error">Repeat
-        Repeat Password is required!</p>
-      <p *ngIf="form.get('rePassword').touched && form.get('rePassword').errors?.rePasswordValidator" class="error">Repeat
-        Password does not match password!</p>
-  
-      <button [disabled]="form.invalid">Create Account</button>
-      <!-- <app-loader [isLoading]="isLoading"></app-loader> -->
-  
-      <p class="text-center">
-        Have an account?
-        <a routerLink="/user/login">Log In</a>
-      </p>
-  
-    </fieldset>
-  </form>
+                      <div class="form-group row">
+                          <label class="col-md-4 col-form-label text-md-right">Username</label>
+                          <div class="col-md-6">
+                              <input type="text" [formControlName]="'username'" class="form-control" required autofocus>
+                              <span class="error" *ngIf="!form.get('username').valid && form.get('username').touched" class="help-block">Username should have at least 5 symbols</span>
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                          <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                          <div class="col-md-6">
+                              <input [formControlName]="'password'" type="password" id="password" class="form-control" name="password" required>
+                              <span class="error" *ngIf="!form.get('password').valid && form.get('password').touched" class="help-block">Password should have at least 4 symbols</span>
+                          </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="rePassword" class="col-md-4 col-form-label text-md-right">Repeat Password</label>
+                        <div class="col-md-6">
+                            <input [formControlName]="'rePassword'" type="password" id="rePassword" class="form-control" name="rePassword" required>
+                            <span class="error" *ngIf="!form.get('rePassword').valid && form.get('rePassword').touched" class="help-block">Passwords should match</span>
+                        </div>
+                    </div>
+
+                      <span class="col-md-6 offset-md-4">
+                          <button type="submit" class="sign-up">
+                              Sign Up
+                          </button>
+                          <span style="padding-left: 15px">Existing user? <a routerLink="/user/login">Log In</a></span>
+                      </span>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3"></div>
+  </div>
+</div>

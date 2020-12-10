@@ -4,17 +4,20 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserRoutingModule } from './user-routing.module';
 import { CoreModule } from '../core/core.module';
+import { LoginComponent } from './login/login.component';
+import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
 
 
 
 @NgModule({
-  declarations: [SignupComponent],
+  declarations: [SignupComponent, LoginComponent, ConfirmEmailComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
     UserRoutingModule,
-    CoreModule
-  ]
+   
+  ],
+  exports:[]
 })
 export class UserModule { }

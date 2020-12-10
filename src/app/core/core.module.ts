@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { AuthService } from './auth.service';
+import { UserModule } from '../user/user.module';
+import{ NgxWebstorageModule } from 'ngx-webstorage';
+
 
 
 
@@ -9,9 +13,11 @@ import { RouterModule } from '@angular/router';
   declarations: [HeaderComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    UserModule,
+    NgxWebstorageModule.forRoot()
   ],
-  providers:[],
+  providers:[AuthService],
   exports:[ HeaderComponent]
 })
 export class CoreModule { }

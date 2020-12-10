@@ -1,0 +1,29 @@
+.btn-link{
+    border: 1px solid #cf2323;
+    background-color: #cf2323;
+    border-radius: 20px;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    opacity: 1;
+}
+
+h1,h3{
+    margin-top: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 4px 4px 7px rgba(0,0,0,0.6);
+}
+
+.button{
+    margin-top: 40px;
+    text-align: center;
+}
+._ngcontent-qqx-c52{
+    margin-bottom: 20px;
+}
+.container{
+    margin-bottom: 20px;
+}
