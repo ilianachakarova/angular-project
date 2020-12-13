@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TopicModel } from './topic-model';
 
@@ -13,11 +13,12 @@ export class TopicService   {
 
 
   getAllTopics():Observable<Array<TopicModel>>{
-    return this.http.get<Array<TopicModel>>('http://localhost:8080/api/topic');
+    return this.http.get<Array<TopicModel>>('http://localhost:8000/api/topic');
   }
 
-  createTopic(topicModel: TopicModel):Observable<TopicModel>{
-    return this.http.post<TopicModel>('http://localhost:8080/api/topic', topicModel);
+  createTopic(topicModel: TopicModel):Observable<any>{
+  
+    return this.http.post<TopicModel>('http://localhost:8000/api/topic', topicModel);
   }
 
 }

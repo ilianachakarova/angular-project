@@ -7,15 +7,28 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { TopicSideBarComponent } from './topic-side-bar/topic-side-bar.component';
 import { VoteButtonComponent } from './vote-button/vote-button.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-
+import { CreateTopicComponent } from './create-topic/create-topic.component';
+import { CreatePostComponent } from './create-post/create-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TopicListComponent } from './topic-list/topic-list.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 
 @NgModule({
-  declarations: [PostComponent, PostListComponent, SideBarComponent, TopicSideBarComponent, VoteButtonComponent],
+  declarations: [PostComponent, 
+    PostListComponent, 
+    SideBarComponent, 
+    TopicSideBarComponent, 
+    VoteButtonComponent, 
+    CreateTopicComponent,
+     CreatePostComponent,
+     TopicListComponent],
   imports: [
     CommonModule,
     PostRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    EditorModule
   ],
   exports:[
     PostListComponent,

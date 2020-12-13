@@ -1,0 +1,21 @@
+h2{
+    text-align: center;
+    margin-top: 40px;
+}
+.topic-container{
+    width: 40%;
+    margin-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    border: 2px solid  #cf2323;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(187, 179, 179);
+}
+a:hover{
+    color: #490505;;
+}
+a{
+ color: #cf2323;
+}

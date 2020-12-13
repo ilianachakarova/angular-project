@@ -84,3 +84,27 @@
      background: #d70a03;
      color: #fff;
 }
+
+.menu-area-main{
+     display: flex;
+}
+.menu-area-main div{
+     display: flex;
+}
+.menu-area-main div li, .menu-are-main li{
+     padding: 0 25px;
+     font-weight: bold;
+     text-transform: uppercase;
+     color:  #fff;
+     cursor: pointer;
+}
+button:hover{
+     color: #fff;
+}
+button{
+     background-color: black;
+     color: blue;
+     text-transform: uppercase;
+     font-weight: bold;
+}
+

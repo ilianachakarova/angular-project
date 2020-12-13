@@ -12,6 +12,8 @@ import { LocalStorageService } from 'ngx-webstorage';
 })
 export class AuthService {
 
+  isLoggedIn:boolean = false;
+
   constructor(private http:HttpClient, private localStorage: LocalStorageService) { }
 
   signup(signupRequestPayload: SignUpRequestPayload): Observable<any>{
@@ -25,9 +27,18 @@ export class AuthService {
       this.localStorage.store('username',data.username);
       this.localStorage.store('refreshToken',data.refreshToken);
       this.localStorage.store('expiresAt', data.expiresAt);
+      this.isLoggedIn = true;
       return true;
     }));
     
+  }
+
+  logout(){
+    this.localStorage.clear();
+  }
+
+  isUserLoggedIn():boolean{
+      return this.localStorage.retrieve('username') !== (null && undefined);
   }
 
   refreshToken() {

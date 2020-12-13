@@ -4,11 +4,19 @@
         <div class="heading">
             <h2>Welcome to Our Web Development Quiz and Blog System</h2>
             <p>Here you can practice your knowledge of Java, JavaScript and DataBases, as well as discuss problems with our community</p>
-            <div class="btn-section">
+            <div *ngIf="!isLoggedIn()" class="btn-section">
                 <p>To get started:</p>
                 <div class="buttons">
                     <a routerLink="/user/signup" class="btn">Sign In</a>
                     <a routerLink="/user/login" class="btn">Login</a>
+                </div>
+            </div>
+
+            <div *ngIf="isLoggedIn()" class="btn-section">
+                <p>Till next time:</p>
+                <div class="buttons">
+                    <button class="btn" (click)="logout()">Logout</button>
+                    
                 </div>
             </div>
             
