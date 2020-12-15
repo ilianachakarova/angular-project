@@ -6,17 +6,19 @@ import { UserRoutingModule } from './user-routing.module';
 import { CoreModule } from '../core/core.module';
 import { LoginComponent } from './login/login.component';
 import { ConfirmEmailComponent } from './confirm-email/confirm-email.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { PostsModule } from '../posts/posts.module';
 
 
 
 @NgModule({
-  declarations: [SignupComponent, LoginComponent, ConfirmEmailComponent],
+  declarations: [SignupComponent, LoginComponent, ConfirmEmailComponent, UserProfileComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
     UserRoutingModule,
-   
+   PostsModule
   ],
   exports:[]
 })

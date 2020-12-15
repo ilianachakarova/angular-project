@@ -12,6 +12,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TopicListComponent } from './topic-list/topic-list.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { ViewPostComponent } from './view-post/view-post.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     VoteButtonComponent, 
     CreateTopicComponent,
      CreatePostComponent,
-     TopicListComponent],
+     TopicListComponent,
+     ViewPostComponent],
   imports: [
     CommonModule,
     PostRoutingModule,
@@ -34,7 +36,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     PostListComponent,
     TopicSideBarComponent,
     VoteButtonComponent,
-    SideBarComponent
+    SideBarComponent,
+    PostComponent
   ]
 })
 export class PostsModule { }

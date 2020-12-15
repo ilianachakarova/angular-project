@@ -17,6 +17,7 @@ export class CreatePostComponent implements OnInit {
   createPostForm: FormGroup;
   postPayload: CreatePostPayload;
   topics: Array<TopicModel>;
+  
   constructor(private router: Router, private postService: PostServiceService, 
     private topicService: TopicService) {
       this.postPayload ={
@@ -47,6 +48,9 @@ export class CreatePostComponent implements OnInit {
     this.postPayload.topicName = this.createPostForm.get('topicName').value;
     this.postPayload.url = this.createPostForm.get('url').value;
     this.postPayload.description = this.createPostForm.get('description').value;
+    this.postService.createPost(this.postPayload).subscribe((data)=>{
+      this.router.navigateByUrl('/posts');
+    })
   }
 
   discardPost(){

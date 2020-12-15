@@ -34,7 +34,7 @@ export class VoteButtonComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    this.updateVoteDetails();
+    // this.updateVoteDetails();
   }
 
   upvotePost() {
@@ -52,16 +52,16 @@ export class VoteButtonComponent implements OnInit {
   private vote(){
     this.votePayload.postId = this.post.id;
     this.voteService.vote(this.votePayload).subscribe(() => {
-      this.updateVoteDetails();
+      // this.updateVoteDetails();
     }, error => {
       this.toastr.error(error.error.message);
       throwError(error);
     });
   }
 
-  private updateVoteDetails() {
-    this.postService.getPost(this.post.id).subscribe(post => {
-      this.post = post;
-    });
-  }
+  // private updateVoteDetails() {
+  //   this.postService.getPostById(this.votePayload.postId).subscribe(post => {
+  //     this.post = post;
+  //   });
+  // }
 }

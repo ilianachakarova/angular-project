@@ -1,6 +1,6 @@
 .post{
     --post-line-color: #ccc;    
-    border: 1px solid #ccc;
+    border: 2px solid  #cf2323;
     margin-top: 10px;
     margin-bottom: 10px;
     overflow: hidden;
@@ -39,3 +39,15 @@
 .post-text{
     margin-top: 10px;
 }
+
+.btn{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 15px, 25px;
+    margin: 15px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #cf2323;
+}
+
