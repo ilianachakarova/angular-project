@@ -84,7 +84,9 @@
      background: #d70a03;
      color: #fff;
 }
-
+h3 a{
+     color:white
+}
 .menu-area-main{
      display: flex;
 }

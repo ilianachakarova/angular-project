@@ -12,8 +12,25 @@
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 2px solid #cf2323;
   }
+  
   
   .sidebar-view-subreddit {
     height: 280px;
   }
+
+  .view-button{
+    margin:10px;
+    padding: 10px 25px;
+    background-color: #cf2323;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+a{
+  color: #cf2323;
+  text-align: center;
+  font-weight: bold;
+}

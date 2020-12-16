@@ -12,13 +12,21 @@
     padding:5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 2px solid #cf2323;
+}
+
+.container-small{
+    background-color: rgb(207, 202, 207);
+    margin-bottom: 35px;
+    font-size: 25px;
+    border-radius: 15px;
 }
 
 .btnCreatePost, .btnCreateSubreddit{
-    background-color: #0079D3;
-    border-color: #0079D3;
+    background-color:  #cf2323;
+    border-color:  #cf2323;
     color: aliceblue;
-    fill: #0079D3;
+    fill:  #cf2323;
     border: 1px solid;
     border-radius: 4px;
     text-align: center;
@@ -37,7 +45,7 @@
 
 .btnCreateSubreddit{
     margin-top: 5px;
-    color: #0079D3;
+    color:  #cf2323;
     background-color: transparent;
 }
 

@@ -1,0 +1,16 @@
+.container{
+    margin-top: 40px;
+}
+
+.comment{
+    border: 2px solid #cf2323;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(214, 200, 200);
+    width: 50%;
+}
+
+.comment-header{
+    font-weight: bold;
+    font-size: 28px;
+}

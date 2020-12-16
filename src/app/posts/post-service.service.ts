@@ -26,6 +26,6 @@ export class PostServiceService {
    }
 
    getAllPostsByUser(name: string): Observable<Array<PostModel>>{
-     return this.http.get<Array<PostModel>>('http://localhost:8000/api/posts/'+ name);
+     return this.http.get<Array<PostModel>>('http://localhost:8000/api/posts/by-user/'+ name);
    }
 }

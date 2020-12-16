@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { throwError } from 'rxjs';
+import { AuthService } from 'src/app/core/auth.service';
 import { PostModel } from 'src/app/posts/post-model';
 import { PostServiceService } from 'src/app/posts/post-service.service';
 import { CommentPayload } from 'src/app/posts/view-post/comment-payload';
@@ -19,18 +21,19 @@ export class UserProfileComponent implements OnInit {
   commentLength:number;
 
   constructor(private activatedRoute: ActivatedRoute, private postService: PostServiceService,
-    private commentService: CommentService) { 
-      this.username = this.activatedRoute.snapshot.params.username;
-
-      this.postService.getAllPostsByUser(this.username).subscribe(data=>{
-        this.posts = data;
-        this.postLength = data.length;
-      });
+    private commentService: CommentService, private authService: AuthService) { 
+      this.username = this.authService.getUserName();
+     
+      this.postService.getAllPostsByUser(this.username).subscribe((response)=>{
+        this.posts = response;
+        this.postLength = response.length;
+      }, error=>{throwError(error)}
+      );
 
       this.commentService.getAllCommentsByUser(this.username).subscribe((data)=>{
         this.comments = data;
         this.commentLength = data.length;
-      })
+      }, error=>{throwError(error)});
     }
 
   ngOnInit(): void {

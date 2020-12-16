@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  
   constructor(private router: Router,private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -21,6 +21,10 @@ export class HeaderComponent implements OnInit {
 
   isLoggedIn():boolean{
    return this.authService.isUserLoggedIn();
+  }
+
+  getUser(){
+    return this.authService.getUserName();
   }
 
 }

@@ -4,9 +4,13 @@
             <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col logo_section">
                 <div class="full">
                     <div class="center-desk">
-                        <div class="logo">
+                        <h3 style="color: white;" 
+                        *ngIf="!isLoggedIn()"><a routerLink="/user/signin"></a>Wellcome, Guest</h3>
+                        <h3 style="color: white;" 
+                        *ngIf="isLoggedIn()"><a routerLink="/user/user-profile">Wellcome, {{getUser()}}</a></h3>
+                        <!-- <div class="logo">
                             <a href="../../../assets/images/logo.jpg"><img src="images/logo.jpg" alt="logo" /></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -22,8 +26,8 @@
                                 <div *ngIf="isLoggedIn()">
                                     <li> <a routerLink="about.html">Quiz</a> </li>
                                     <li> <a routerLink="/posts">Posts</a> </li>
-                                    <li> <a routerLink="/user/user-profile">Contact</a> </li>
-
+                                    <li> <a routerLink="/user/user-profile">Profile</a> </li>
+                                    
                                 </div>
                                
                                 <div *ngIf="!isLoggedIn()">
