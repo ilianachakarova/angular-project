@@ -1,0 +1,16 @@
+.tile-content{
+    border: 2px solid  #cf2323;   
+    margin: 25px;
+    overflow: hidden;
+    background-color: rgba(201, 193, 193, 0.8);
+    color: #878A8C;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 4px;
+    padding:25px 100px;
+}
+
+.quiz-tile{
+    margin: 0 auto;
+}

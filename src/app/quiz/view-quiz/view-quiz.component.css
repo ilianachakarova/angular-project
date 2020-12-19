@@ -1,0 +1,16 @@
+.question{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(119, 17, 17);
+}
+
+.btn-block{
+    background-color: #cf2323;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.container{
+    background-color: rgb(190, 180, 180);
+}

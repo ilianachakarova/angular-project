@@ -22,7 +22,7 @@ export class ViewPostComponent implements OnInit {
   constructor(private postService: PostServiceService, private activateRoute: ActivatedRoute,
     private router: Router, private commentService: CommentService) {
     this.postId = this.activateRoute.snapshot.params['id'];
-      console.log(this.postId);
+      
   
     this.commentForm = new FormGroup({
       text: new FormControl('',Validators.required)

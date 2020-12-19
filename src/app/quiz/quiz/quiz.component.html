@@ -1,0 +1,343 @@
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <form [formGroup]="angForm" (ngSubmit)="submitHandler()" class="card text-center" novalidate>
+                <label class="table-title">Title</label>
+                <input type="text" class="form-control" formControlName="title" placeholder="title">
+                <div *ngIf="angForm.controls['title'].invalid && (angForm.controls['title'].dirty || angForm.controls['title'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['title'].errors.required">
+                        Title is required.
+                    </div>
+                </div>
+                <table class="table">
+                    <tbody>
+                        <td colspan="10">
+                            <div class="form-group">
+                                <label class="col-md-4">Question No. 1</label>
+                                <input type="text" class="form-control" formControlName="q1" #q1 />
+                            </div>
+                            <div *ngIf="angForm.controls['q1'].invalid && (angForm.controls['q1'].dirty || angForm.controls['q1'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q1'].errors.required">
+                                    Question is required.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option A</label>
+                                        <input type="text" class="form-control" formControlName="q1ch1" #q1ch1/>
+                                    </div>
+                                    <div *ngIf="angForm.controls['q1ch1'].invalid && (angForm.controls['q1ch1'].dirty || angForm.controls['q1ch1'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q1ch1'].errors.required">
+                                            Choice 1 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option B</label>
+                                        <input type="text" class="form-control" formControlName="q1ch2" #q1ch2/>
+                                    </div>
+                                    <div *ngIf="angForm.controls['q1ch2'].invalid && (angForm.controls['q1ch2'].dirty || angForm.controls['q1ch2'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q1ch2'].errors.required">
+                                            Choice 2 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option C</label>
+                                        <input type="text" class="form-control" formControlName="q1ch3" #q1ch3/>
+                                    </div>
+                                    <div *ngIf="angForm.controls['q1ch3'].invalid && (angForm.controls['q1ch3'].dirty || angForm.controls['q1ch3'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q1ch3'].errors.required">
+                                            Choice 3 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-md-4">Correct Option (Type in the correct answer)</label>
+                                <input type="text" class="form-control" formControlName="q1correctOption" #q1correctOption/>
+                            </div>
+                            <div *ngIf="angForm.controls['q1correctOption'].invalid && (angForm.controls['q1correctOption'].dirty || angForm.controls['q1correctOption'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q1correctOption'].errors.required">
+                                    Correct Answer is required.
+                                </div>
+                            </div>
+                        </td>
+                    </tbody>
+                    <tbody>
+                        <td colspan="10">
+                            <div class="form-group">
+                                <label class="col-md-4">Question No. 2</label>
+                                <input type="text" class="form-control" formControlName="q2" #q2 />
+                            </div>
+                            <div *ngIf="angForm.controls['q2'].invalid && (angForm.controls['q2'].dirty || angForm.controls['q2'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q2'].errors.required">
+                                    Question is required.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option A</label>
+                                        <input type="text" class="form-control" formControlName="q2ch1" #q2ch1 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q2ch1'].invalid && (angForm.controls['q2ch1'].dirty || angForm.controls['q2ch1'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q2ch1'].errors.required">
+                                            Choice 1 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option B</label>
+                                        <input type="text" class="form-control" formControlName="q2ch2" #q2ch2 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q2ch2'].invalid && (angForm.controls['q2ch2'].dirty || angForm.controls['q2ch2'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q2ch2'].errors.required">
+                                            Choice 2 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option C</label>
+                                        <input type="text" class="form-control" formControlName="q2ch3" #q2ch3 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q2ch3'].invalid && (angForm.controls['q2ch3'].dirty || angForm.controls['q2ch3'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q2ch3'].errors.required">
+                                            Choice 3 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-md-4">Correct Option (Type in the correct answer)</label>
+                                <input type="text" class="form-control" formControlName="q2correctOption" #q2correctOption />
+                            </div>
+                            <div *ngIf="angForm.controls['q2correctOption'].invalid && (angForm.controls['q2correctOption'].dirty || angForm.controls['q2correctOption'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q2correctOption'].errors.required">
+                                    Correct Answer is required.
+                                </div>
+                            </div>
+                        </td>
+                    </tbody>
+                    <tbody>
+                        <td colspan="10">
+                            <div class="form-group">
+                                <label class="col-md-4">Question No. 3</label>
+                                <input type="text" class="form-control" formControlName="q3" #q3 />
+                            </div>
+                            <div *ngIf="angForm.controls['q3'].invalid && (angForm.controls['q3'].dirty || angForm.controls['q3'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q3'].errors.required">
+                                    Question is required.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option A</label>
+                                        <input type="text" class="form-control" formControlName="q3ch1" #q3ch1 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q3ch1'].invalid && (angForm.controls['q3ch1'].dirty || angForm.controls['q3ch1'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q3ch1'].errors.required">
+                                            Choice 1 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option B</label>
+                                        <input type="text" class="form-control" formControlName="q3ch2" #q3ch2 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q3ch2'].invalid && (angForm.controls['q3ch2'].dirty || angForm.controls['q3ch2'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q3ch2'].errors.required">
+                                            Choice 2 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option C</label>
+                                        <input type="text" class="form-control" formControlName="q3ch3" #q3ch3 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q3ch3'].invalid && (angForm.controls['q3ch3'].dirty || angForm.controls['q3ch3'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q3ch3'].errors.required">
+                                            Choice 3 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-md-4">Correct Option (Type in the correct answer)</label>
+                                <input type="text" class="form-control" formControlName="q3correctOption" #q3correctOption />
+                            </div>
+                            <div *ngIf="angForm.controls['q3correctOption'].invalid && (angForm.controls['q3correctOption'].dirty || angForm.controls['q3correctOption'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q3correctOption'].errors.required">
+                                    Correct Answer is required.
+                                </div>
+                            </div>
+                        </td>
+                    </tbody>
+                    <tbody>
+                        <td colspan="10">
+                            <div class="form-group">
+                                <label class="col-md-4">Question No. 4</label>
+                                <input type="text" class="form-control" formControlName="q4" #q4 />
+                            </div>
+                            <div *ngIf="angForm.controls['q4'].invalid && (angForm.controls['q4'].dirty || angForm.controls['q4'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q4'].errors.required">
+                                    Question is required.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option A</label>
+                                        <input type="text" class="form-control" formControlName="q4ch1" #q4ch1 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q4ch1'].invalid && (angForm.controls['q4ch1'].dirty || angForm.controls['q4ch1'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q4ch1'].errors.required">
+                                            Choice 1 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option B</label>
+                                        <input type="text" class="form-control" formControlName="q4ch2" #q4ch2 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q4ch2'].invalid && (angForm.controls['q4ch2'].dirty || angForm.controls['q4ch2'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q4ch2'].errors.required">
+                                            Choice 2 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option C</label>
+                                        <input type="text" class="form-control" formControlName="q4ch3" #q4ch3 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q4ch3'].invalid && (angForm.controls['q4ch3'].dirty || angForm.controls['q4ch3'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q4ch3'].errors.required">
+                                            Choice 3 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-md-4">Correct Option (Type in the correct answer)</label>
+                                <input type="text" class="form-control" formControlName="q4correctOption" #q4correctOption />
+                            </div>
+                            <div *ngIf="angForm.controls['q4correctOption'].invalid && (angForm.controls['q4correctOption'].dirty || angForm.controls['q4correctOption'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q4correctOption'].errors.required">
+                                    Correct Answer is required.
+                                </div>
+                            </div>
+                        </td>
+                    </tbody>
+                    <tbody>
+                        <td colspan="10">
+                            <div class="form-group">
+                                <label class="col-md-4">Question No. 5</label>
+                                <input type="text" class="form-control" formControlName="q5" #q5 />
+                            </div>
+                            <div *ngIf="angForm.controls['q5'].invalid && (angForm.controls['q5'].dirty || angForm.controls['q5'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q5'].errors.required">
+                                    Question is required.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option A</label>
+                                        <input type="text" class="form-control" formControlName="q5ch1" #q5ch1 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q5ch1'].invalid && (angForm.controls['q5ch1'].dirty || angForm.controls['q5ch1'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q5ch1'].errors.required">
+                                            Choice 1 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option B</label>
+                                        <input type="text" class="form-control" formControlName="q5ch2" #q5ch2 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q5ch2'].invalid && (angForm.controls['q5ch2'].dirty || angForm.controls['q5ch2'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q5ch2'].errors.required">
+                                            Choice 2 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="col-md-4">Option C</label>
+                                        <input type="text" class="form-control" formControlName="q5ch3" #q5ch3 />
+                                    </div>
+                                    <div *ngIf="angForm.controls['q5ch3'].invalid && (angForm.controls['q5ch3'].dirty || angForm.controls['q5ch3'].touched)" class="alert alert-danger">
+                                        <div *ngIf="angForm.controls['q5ch3'].errors.required">
+                                            Choice 3 is required.
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-md-4">Correct Option (Type in the correct answer)</label>
+                                <input type="text" class="form-control" formControlName="q5correctOption" #q5correctOption />
+                            </div>
+                            <div *ngIf="angForm.controls['q5correctOption'].invalid && (angForm.controls['q5correctOption'].dirty || angForm.controls['q5correctOption'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['q5correctOption'].errors.required">
+                                    Correct Answer is required.
+                                </div>
+                            </div>
+                        </td>
+                    </tbody>
+                    <tbody>
+                        <td>
+                            <button type="submit" class="btn btn-primary">
+                                Create
+                            </button>
+                        </td>
+                        <!-- <td colspan="10">
+                            <button routerLink="/quiz-display" (click)="addQuestion(q1.value,q1ch1.value,q1ch2.value,q1ch3.value,q1ch4.value,q1correctOption.value,
+                                                q2.value,q2ch1.value,q2ch2.value,q2ch3.value,q2ch4.value,q2correctOption.value,
+                                                q3.value,q3ch1.value,q3ch2.value,q3ch3.value,q3ch4.value,q3correctOption.value,
+                                                q4.value,q4ch1.value,q4ch2.value,q4ch3.value,q4ch4.value,q4correctOption.value,
+                                                q5.value,q5ch1.value,q5ch2.value,q5ch3.value,q5ch4.value,q5correctOption.value)" class="btn btn-primary">Submit</button>
+                        </td> -->
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<br>

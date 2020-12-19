@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { TokenInterceptor } from './token-interceptor';
 import { PostsModule } from './posts/posts.module';
+import { QuizModule } from './quiz/quiz.module';
 
 
 
@@ -25,6 +26,7 @@ import { PostsModule } from './posts/posts.module';
     AppRoutingModule,
     UserModule,
     PostsModule,
+    QuizModule,
     HttpClientModule,
     CoreModule,
     BrowserAnimationsModule,

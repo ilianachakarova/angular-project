@@ -24,7 +24,8 @@
                                 </div>
                                 
                                 <div *ngIf="isLoggedIn()">
-                                    <li> <a routerLink="about.html">Quiz</a> </li>
+                                    <li> <a routerLink="/quiz">Create Quiz</a> </li>
+                                    <li> <a routerLink="/quiz/quiz-list">Take Quiz</a> </li>
                                     <li> <a routerLink="/posts">Posts</a> </li>
                                     <li> <a routerLink="/user/user-profile">Profile</a> </li>
                                     
@@ -32,7 +33,7 @@
                                
                                 <div *ngIf="!isLoggedIn()">
                                 <li> <a routerLink="/posts">Posts</a> </li>
-                                <li> <a routerLink="contact.html">Contact</a> </li>
+                                <li> <a routerLink="/quiz">Create Quiz</a> </li>
                                 <li> <a routerLink="/user/signup">Register</a> </li>
                                 <li> <a routerLink="/user/login">Login</a> </li>
                             </div>

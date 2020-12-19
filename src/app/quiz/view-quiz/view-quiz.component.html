@@ -1,0 +1,39 @@
+
+<div class="card container" *ngFor="let pr of quiz.problems">
+    <div class="card-body text-center question">{{ pr.question }}</div>
+    <div class="row">
+        <div class="col-6">
+            <button (click)="onAnswerInput($event.target.value)" value="{{pr.answer1}}" class="btn btn-primary btn-block" role="alert">{{ pr.answer1 }}</button>
+        </div>
+        <div class="col-6">
+            <button (click)="onAnswerInput($event.target.value)" value="{{pr.answer2}}" class="btn btn-primary btn-block" role="alert">{{ pr.answer2}}</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-6">
+            <button (click)="onAnswerInput($event.target.value)" value="{{pr.answer3}}" class="btn btn-primary btn-block" role="alert">{{ pr.answer3 }}</button>
+        </div>
+    </div>
+    <br/>
+    <!-- <div class="form-action">
+        <input (input)="onAnswerInput($event.target.value)" type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
+    </div> -->
+    <br>
+    <button *ngIf="pr.correctAnswer === answer" class="btn btn-success btn-msg">
+        Your are right. {{ pr.correctAnswer }} is the correct answer
+    </button>
+    <!-- <div *ngFor="let answerOption of answerOptions" class="form-action">
+        <button *ngIf="pr.correctAnswer === answer" class="btn btn-success btn-block">
+            Your are right. {{ pr.correctAnswer }} is the correct answer
+        </button>
+    </div> -->
+
+
+
+    <!-- <div class="form-action">
+        <button *ngIf="pr.correctAnswer!==answer && answer!=''" class="btn btn-danger btn-block">
+            Your Answer is Incorrect
+        </button>
+    </div> -->
+</div>

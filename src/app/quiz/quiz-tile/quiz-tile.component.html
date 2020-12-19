@@ -1,0 +1,5 @@
+<div class="row quiz-tile">
+    <div class="tile-content" *ngFor="let quiz of quizList">
+       <a routerLink="/quiz/{{quiz.title}}">{{quiz.title}}</a> 
+    </div>
+</div>

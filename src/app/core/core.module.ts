@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { AuthService } from './auth.service';
 import { UserModule } from '../user/user.module';
 import{ NgxWebstorageModule } from 'ngx-webstorage';
+import { QuizModule } from '../quiz/quiz.module';
+
 
 
 
@@ -15,6 +17,7 @@ import{ NgxWebstorageModule } from 'ngx-webstorage';
     CommonModule,
     RouterModule,
     UserModule,
+    QuizModule,
     NgxWebstorageModule.forRoot()
   ],
   providers:[AuthService],
